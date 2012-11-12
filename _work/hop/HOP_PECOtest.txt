@@ -1,3 +1,0 @@
-EDC DUNS Number	Customer Account Number	Billing Name 1	Billing Address 1	Billing Address 2	Billing Address 3	Billing City	Billing State	Billing Zip	Billing Country Code	Rate Code	Rate Subclass	Appended Phone
-007914468	1167465000	GRANDVIEW RLTY ASSOC LP	270 SYLVAN AVE			ENGLEWOOD CLIFFS	NJ	07632	USA	GS	101	2012270244
-007914468	6109200706	"WILLOW GROVE KARATE,INC"	485 BOULEVARD			ELMWOOD PARK	NJ	07407	USA	GS	101	2012540735
