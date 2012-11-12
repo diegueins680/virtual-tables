@@ -57,7 +57,7 @@ class DBAccessorObj extends DataBaseAccessor
 	{
 		/* @var $virtualBaseTable FieldFormat */
 		$filters = [];
-		$virtualBaseTable = Table::getInstanceBy($filters)->baseTable;
+		$virtualBaseTable = VirtualTable::getInstanceBy($filters)->baseTable;
 		$params->db_connection = $virtualBaseTable->getDBConnection();
 		$params->baseTable = AppConst::TABLE_OBJECT;
 		if(is_null($params->jointFields))
@@ -65,7 +65,7 @@ class DBAccessorObj extends DataBaseAccessor
 			$params->jointFields = [];
 		}
 		/* @var $table Table */
-		$table = Table::getInstance();
+		$table = VirtualTable::getInstance();
 		/* @var $objectIsType RelationObjectIsType */
 		$objectIsType = RelationObjectIsType::getInstance();
 		$params->jointFields[] =  

@@ -533,7 +533,7 @@ class Stats extends DataBaseAccessor
         }
         else
         {
-            $table = Table::getInstanceBy(array(array('table_name', $params->repositoryName, '=')));
+            $table = DBTable::getInstanceBy(array(array('table_name', $params->repositoryName, '=')));
         }
         /* @var $dbObject ConcreteDBAccessor */
         foreach($params->results as $result)
@@ -553,7 +553,7 @@ class Stats extends DataBaseAccessor
                 }
                 $filters = array(array('name', $columnName, 'LIKE')
                                        );
-                $column = Column::getInstanceBy($filters);
+                $column = DBColumn::getInstanceBy($filters);
                 /* @var $column Column */
                 $params->attributeValue = $attributeValue;
                 $column->control($params);
@@ -571,7 +571,7 @@ class Stats extends DataBaseAccessor
     private function setRepository($params)
     {
         /* @var $table Table */
-        $table = Table::getInstance();
+        $table = DBTable::getInstance();
         $table->setColumnsFromResults($params);
         $table->set('table_name', $params->repositoryName);
         $table->assureExistence();
