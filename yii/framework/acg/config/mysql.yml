@@ -1,0 +1,24 @@
+Default: &defaults
+  user: acg
+  password: acg
+  host: localhost
+  port: 3306
+  database: acg
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: acg_test
+  <<: *defaults
+
+Staging:
+  database: acg_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: acg_production
+  poolsize: 100
+  <<: *defaults
